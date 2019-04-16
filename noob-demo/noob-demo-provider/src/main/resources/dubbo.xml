@@ -7,7 +7,7 @@
     <dubbo:protocol name="dubbo" port="20880"/>
     <!-- noob start-->
     <bean id="resolver" class="com.lemuria.noob.service.NOOBAnnotationResolver"/>
-    <bean id="gs" class="com.lemuria.noob.service.NOOBGenericService">
+    <bean id="genericService" class="com.lemuria.noob.service.NOOBGenericService">
         <property name="noobAnnotationResolver" ref="resolver"/>
     </bean>
     <bean id="exporter" class="com.lemuria.noob.service.NOOBAnnotationExporter">
