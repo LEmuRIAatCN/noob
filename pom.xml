@@ -13,6 +13,7 @@
         <module>noob-client</module>
         <module>noob-service</module>
         <module>noob-demo</module>
+        <module>noob-common</module>
     </modules>
     <properties>
         <dubbo_version>2.7.0</dubbo_version>

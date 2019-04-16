@@ -1,11 +1,14 @@
 package com.lemuria.noob.service;
 
 import com.lemuria.noob.service.pojo.NOOBAnnotationBean;
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.rpc.service.GenericException;
 import org.apache.dubbo.rpc.service.GenericService;
 
 import java.lang.reflect.InvocationTargetException;
-
+@Data
+@Slf4j
 public class NOOBGenericService implements GenericService {
     private NOOBAnnotationResolver noobAnnotationResolver;
 
