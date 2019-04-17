@@ -16,4 +16,7 @@
     <!-- noob end-->
     <dubbo:service interface="com.lemuria.noob.demo.api.Demo" ref="demo1"/>
     <bean id="demo1" class="com.lemuria.noob.demo.provider.DemoImpl"/>
+    <!-- async service-->
+    <dubbo:service interface="com.lemuria.noob.demo.api.AsyncDemo" ref="asyncDemo"/>
+    <bean id="asyncDemo" class="com.lemuria.noob.demo.provider.AsyncDemoImpl"/>
 </beans>

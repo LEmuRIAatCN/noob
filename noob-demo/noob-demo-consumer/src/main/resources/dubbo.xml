@@ -12,5 +12,10 @@
     <bean id="invoker" class="com.lemuria.noob.client.NOOBClientInvoker">
         <property name="noobClientAnnotationResolver" ref="resolverC"/>
     </bean>
+    <!-- noob end-->
     <dubbo:reference id="consumerDemo" interface="com.lemuria.noob.demo.api.Demo" check="false"/>
+    <!-- 提供方实现了异步服务，消费者这里同步调用?-->
+    <dubbo:reference id="asyncDemo" interface="com.lemuria.noob.demo.api.AsyncDemo" check="false" />
+    <!-- 异步消费，异步调用 -->
+    <dubbo:reference id="asyncConsume" interface="com.lemuria.noob.demo.api.AsyncDemo"  check="false" async="true"/>
 </beans>
