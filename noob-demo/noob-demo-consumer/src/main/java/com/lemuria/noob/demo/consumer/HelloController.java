@@ -31,6 +31,16 @@ public class HelloController {
     private AsyncDemo asyncDemo;
     @Resource(name= "asyncConsume")
     private AsyncDemo asyncConsume;
+
+    @RequestMapping("/hello")
+    public ModelMap hello(){
+        log.info("asdfasdf");
+        ModelMap mm = new ModelMap();
+        mm.put("data", "这里是数据");
+        mm.put("msg", "沃尔沃二");
+        return mm;
+    }
+
     @RequestMapping("/hello1")
     public ModelMap hello1(){
         log.info("asdfasdf");
