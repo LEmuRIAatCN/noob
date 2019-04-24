@@ -5,18 +5,19 @@
     <dubbo:application name="provider" logger="slf4j"/>
     <dubbo:registry address="zookeeper://127.0.0.1:2181" id="r1"/>
     <dubbo:protocol name="dubbo" port="20880"/>
+    <dubbo:protocol name="hessian" port="9999"/>
     <!-- noob start-->
-    <bean id="resolver" class="com.lemuria.noob.service.NOOBAnnotationResolver"/>
+    <!--<bean id="resolver" class="com.lemuria.noob.service.NOOBAnnotationResolver"/>
     <bean id="genericService" class="com.lemuria.noob.service.NOOBGenericService">
         <property name="noobAnnotationResolver" ref="resolver"/>
     </bean>
     <bean id="exporter" class="com.lemuria.noob.service.NOOBAnnotationExporter">
         <property name="noobAnnotationResolver" ref="resolver"/>
-    </bean>
+    </bean>-->
     <!-- noob end-->
     <dubbo:service interface="com.lemuria.noob.demo.api.Demo" ref="demo1"/>
     <bean id="demo1" class="com.lemuria.noob.demo.provider.DemoImpl"/>
     <!-- async service-->
-    <dubbo:service interface="com.lemuria.noob.demo.api.AsyncDemo" ref="asyncDemo"/>
+    <dubbo:service interface="com.lemuria.noob.demo.api.AsyncDemo" ref="asyncDemo" protocol="hessian"/>
     <bean id="asyncDemo" class="com.lemuria.noob.demo.provider.AsyncDemoImpl"/>
 </beans>
