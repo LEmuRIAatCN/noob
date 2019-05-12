@@ -30,6 +30,7 @@
         <javassist_version>3.20.0-GA</javassist_version>
         <dubbo_version>2.7.0</dubbo_version>
         <lombok_version>1.18.6</lombok_version>
+        <sentinel_version>1.6.0</sentinel_version>
     </properties>
     <dependencies>
         <!-- TODO 这里还依赖了springboot starter父工程-->
