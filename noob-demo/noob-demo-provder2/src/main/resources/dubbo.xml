@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
     <dubbo:application name="provider" logger="slf4j"/>
     <dubbo:registry address="zookeeper://127.0.0.1:2181" id="r1"/>
-    <dubbo:protocol name="dubbo" port="20880"/>
+    <dubbo:protocol name="dubbo" port="20881"/>
     <!--<dubbo:protocol name="hessian" port="9999"/>-->
     <!-- noob start-->
     <!--<bean id="resolver" class="com.lemuria.noob.service.NOOBAnnotationResolver"/>
@@ -16,10 +16,6 @@
     </bean>-->
     <!-- noob end-->
     <dubbo:service interface="com.lemuria.noob.demo.api.Demo" ref="demo1"/>
-    <bean id="demo1" class="com.lemuria.noob.demo.provider.DemoImpl"/>
-    <!-- async service-->
-    <dubbo:service interface="com.lemuria.noob.demo.api.AsyncDemo" ref="asyncDemo" />
-    <bean id="asyncDemo" class="com.lemuria.noob.demo.provider.AsyncDemoImpl"/>
-
+    <bean id="demo1" class="com.lemuria.noob.demo.provider2.DemoImpl"/>
 
 </beans>
